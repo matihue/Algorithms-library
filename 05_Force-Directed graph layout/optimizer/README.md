@@ -11,20 +11,15 @@
 
 ## In simplified form, the process looks like this:
 
-generate random parameters
-           ↓
-   run graph optimizer
-           ↓
-     measure score
-           ↓
-keep better configurations
-           ↓
-  re-test the best ones
-           ↓
-   narrow search space
-           ↓
-         repeat
-
+```mermaid
+flowchart TD
+    A[Generate random parameters] --> B[Run graph optimizer]
+    B --> C[Measure score]
+    C --> D[Keep best configurations]
+    D --> E[Re-test promising configurations]
+    E --> F[Narrow search space]
+    F --> A
+```
 
 Because the graph layout itself contains randomness, a single run is not always enough to judge whether a parameter set is actually good. For this reason, the meta-optimizer uses repeated benchmarks for the most promising configurations.
 
