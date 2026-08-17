@@ -1,7 +1,7 @@
-## Problem:
+## Problem
 Arrange a given graph in a way that makes it as readable and visually structured as possible.
 
-## Intuition:
+## Intuition
 
 This algorithm works similarly to a physical simulation. Instead of directly calculating the final positions of all nodes, it repeatedly applies several different forces that gradually move the graph toward a better layout.
 
@@ -24,7 +24,7 @@ The user can modify the weights of these components, allowing the algorithm to p
 The algorithm does not guarantee a perfect layout. Different forces can compete with each other, and the optimization can converge to different local solutions depending on the initial node positions.
 
 
-## Planarity:
+## Planarity
 
 - It is worth noting that NOT every graph can be drawn without edge crossings.
 
